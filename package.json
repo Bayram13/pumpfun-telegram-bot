@@ -1,0 +1,14 @@
+{
+  "name": "pumpfun-telegram-bot",
+  "version": "1.0.0",
+  "description": "Poll PumpFun new tokens, filter by metrics, send matches to Telegram",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "express": "^4.18.2",
+    "@upstash/redis": "^1.18.0"
+  }
+}
