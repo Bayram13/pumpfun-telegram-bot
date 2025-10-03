@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: pumpfun-telegram-bot
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: PUMPFUN_API_URL
+        scope: PRIVATE
+      - key: PUMPFUN_API_KEY
+        scope: PRIVATE
+      - key: HELIUS_RPC_URL
+        scope: PRIVATE
+      - key: HELIUS_API_KEY
+        scope: PRIVATE
+      - key: MORALIS_API_KEY
+        scope: PRIVATE
+      - key: UPSTASH_REDIS_REST_URL
+        scope: PRIVATE
+      - key: UPSTASH_REDIS_REST_TOKEN
+        scope: PRIVATE
+      - key: TELEGRAM_BOT_TOKEN
+        scope: PRIVATE
+      - key: TELEGRAM_CHAT_ID
+        scope: PRIVATE
+      - key: POLL_INTERVAL_MS
+        scope: PRIVATE
