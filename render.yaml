@@ -1,29 +1,27 @@
 services:
   - type: web
-    name: pumpfun-telegram-bot
+    name: pumpfun-helius-scanner
     env: node
-    region: oregon
     plan: free
+    region: oregon
     buildCommand: "npm install"
     startCommand: "npm start"
     envVars:
-      - key: PUMPFUN_API_URL
-        scope: PRIVATE
-      - key: PUMPFUN_API_KEY
-        scope: PRIVATE
-      - key: HELIUS_RPC_URL
-        scope: PRIVATE
-      - key: HELIUS_API_KEY
-        scope: PRIVATE
-      - key: MORALIS_API_KEY
-        scope: PRIVATE
       - key: UPSTASH_REDIS_REST_URL
-        scope: PRIVATE
+        sync: false
       - key: UPSTASH_REDIS_REST_TOKEN
-        scope: PRIVATE
+        sync: false
+      - key: MORALIS_API_KEY
+        sync: false
+      - key: MORALIS_API_BASE
+        value: "https://deep-index.moralis.io/api/v2"
+        sync: false
       - key: TELEGRAM_BOT_TOKEN
-        scope: PRIVATE
+        sync: false
       - key: TELEGRAM_CHAT_ID
-        scope: PRIVATE
-      - key: POLL_INTERVAL_MS
-        scope: PRIVATE
+        sync: false
+      - key: HELIUS_WEBHOOK_SECRET
+        sync: false
+      - key: COINGECKO_FALLBACK
+        value: "true"
+        sync: false
